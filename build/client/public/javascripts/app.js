@@ -7393,7 +7393,7 @@ module.exports = HomeView = (function(_super) {
     };
     if (frame.length === 0) {
       frame = this.createApplicationIframe(slug, hash);
-      return frame.on('load', onLoad);
+      return onLoad();
     } else if (hash) {
       frame.prop('contentWindow').location.hash = hash;
       return onLoad();
